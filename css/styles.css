@@ -67,11 +67,13 @@ body {
     display: block;   
 }
 
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0px;
+    padding: 0px;
+}
 
 h1,
 h2 {
-    margin: 0px;
-
     color: var(--primary-text-color);
 
     font-weight: 700;
@@ -80,9 +82,15 @@ h2 {
     text-align: center;
 }
 
+h2 {
+    margin-bottom: 50px;
+}
+
+
 b {
     font-weight: 700;
 }
+
 
 .container {
     width: 1200px;
@@ -92,15 +100,7 @@ b {
     padding-left: 15px;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
 }
-
-.footer,
-.header {
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
-
 
 .temp {
     outline: 3px solid sandybrown;
@@ -109,6 +109,13 @@ b {
 
 /* СТИЛИ СТРАНИЦЫ СТУДИЯ */
 /* Шапка сайта */
+
+header > .container {
+    display: flex;
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+}
 
 .nav,
 .nav-list {
@@ -191,8 +198,6 @@ b {
 /* Секция-герой */
 .hero {
     text-align: center;
-    padding-top: 200px;
-    padding-bottom: 280px;
 
     color: var(--dark-section-text-color);
     background-color: var(--opacity-section-color);
@@ -278,7 +283,24 @@ b {
 
 /* Секция Чем мы занимаемся */
 
+.fields .container {
+    padding-top: 0px;
+}
+
+.fields-list {
+    display: flex;
+    justify-content: center;
+}
+
+.fields-list-item:not(:last-child) {
+    padding-right: 30px;
+}
+
 .fields-list-item-title {
+    margin: 0px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+
     color: var(--dark-section-text-color);
     background-color: var(--opacity-section-color);
 
@@ -294,22 +316,45 @@ b {
     background-color: var(--secondary-bg-color);
 }
 
+.our-team-list {
+    display: flex;
+    justify-content: center;
+}
+
 .our-team-list-item {
     background-color: var(--primary-bg-color);
 }
 
+.our-team-list-item:not(:last-child) {
+    margin-right: 30px;
+}
+
 .our-team-list-item > .worker-name {
+    margin-top: 30px;
+    margin-bottom: 10px;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
 }
 .our-team-list-item > .position {
+    margin-bottom: 16px;
     color: var(--secondary-text-color);
 
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.social-item:not(:last-child) {
+    margin-right: 10px;
 }
 
 .social-item:hover,
@@ -320,17 +365,33 @@ b {
 }
 
 .social-item-link {
+    display: block;
+    padding: 12px;
+
     color: var(--primary-text-color);
 }
 
 /* Секция Клиенты */
+.clients-list {
+    display: flex;
+    justify-content: center;
+}
 .clients-list-item {
+    width: 170px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background-color: var(--primary-bg-color);
     border-style: solid;
     border-width: 1px;
     border-radius: 4px;
     border-color: #AFB1B8;
+}
 
+.clients-list-item:not(:last-child) {
+    margin-right: 30px;
 }
 .clients-list-item:hover,
 .clients-list-item:focus {
@@ -338,6 +399,7 @@ b {
 }
 
 /* Подвальчик */
+
 .footer {
     color: var(--dark-section-text-color);
     background-color: #2F303A;
@@ -347,7 +409,23 @@ b {
     line-height: 1.14;
     text-transform: uppercase;
 }
+
+.footer > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+}
+
+/* .footer-item-wrapper {
+    margin-right: 69px;
+} */
+
 .footer-logo {
+    margin-bottom: 20px;
+
     color: var(--dark-section-text-color);
 
     font-family: Raleway;
@@ -361,6 +439,11 @@ b {
     line-height: 1.71;
     text-transform: none;
 }
+
+.address-item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
 .address-item-post {
     color: var(--dark-section-text-color);
 }
@@ -368,11 +451,31 @@ b {
 .address-item-phone {
   color: rgba(255, 255, 255, 0.6);  
 }
+
+/* .join {
+    margin-right: 94px;
+} */
+
+.join-title,
+.signup-title {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.join-list {
+    display: flex;
+    justify-content: center;
+}
+
 .join-list > .social-item {
     background-color: rgba(255, 255, 255, 0.1);
 }
 .join-list > .social-item:hover {
     background-color: var(--accent-color);
+}
+
+.subscribe-form .btn-primary {
+    margin-left: 12px;
 }
 /* КОНЕЦ СТИЛЕЙ СТРАНИЦЫ СТУДИЯ */
 
@@ -380,8 +483,23 @@ b {
 .gallery {
     color: var(--primary-text-color);
 }
+
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.gallery-filters-item:not(:last-child) {
+    margin-right: 8px;
+}
+
+
 .gallery-filters-item-btn {
-    
+    display: flex;
+    padding: 6px 22px;
+
+
     border-width: 0px;
     border-radius: 4px;
 
