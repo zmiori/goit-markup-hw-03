@@ -539,10 +539,6 @@ header > .container {
 
 .gallery-works-box {
     width: calc((100% - 60px) / 3);
-    
-    border-style: solid;
-    border-width: 1px;
-    border-color: #eeeeee;
 }
 
 .gallery-works-box:not(:nth-child(3n + 3)) {
@@ -562,10 +558,21 @@ header > .container {
 }
 
 .gallery-works-box .wrapper {
-    margin-top: 20px;
-    margin-right: 24px;
-    margin-bottom: 20px;
-    margin-left: 24px;
+    padding-top: 20px;
+    padding-right: 24px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+
+     
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #eeeeee;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #eeeeee;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #eeeeee;
 }
 
 .gallery-works-box-name {
