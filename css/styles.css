@@ -248,6 +248,10 @@ header > .container {
     display: flex;
 }
 
+.features-list-item {
+    width: calc((100% - 90px) / 4);
+}
+
 .features-list-item:not(:last-child) {
     margin-right: 30px;
 }
@@ -293,6 +297,10 @@ header > .container {
     justify-content: center;
 }
 
+.fields-list-item {
+    widows: calc((100% - 60px) / 3);
+}
+
 .fields-list-item:not(:last-child) {
     padding-right: 30px;
 }
@@ -323,6 +331,7 @@ header > .container {
 }
 
 .our-team-list-item {
+    width: calc((100% - 90px) / 4);
     background-color: var(--primary-bg-color);
 }
 
@@ -378,7 +387,7 @@ header > .container {
     justify-content: center;
 }
 .clients-list-item {
-    width: 170px;
+    width: calc((100% - 150px) / 6);
     height: 90px;
     display: flex;
     justify-content: center;
